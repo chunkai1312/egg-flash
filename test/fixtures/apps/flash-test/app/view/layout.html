@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/css/bootstrap-responsive.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="messages">
+      {% if messages %}
+        {% for message in messages.info %}
+          <div class="alert alert-success">
+            <button type="button" data-dismiss="alert" class="close">×</button>
+            <strong>Info:</strong>
+            <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="main row-fluid">
+      <div class="span3">
+        <ul class="well nav nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/add-message">Add Message</a></li>
+          <li><a href="/add-messages">Add Messages</a></li>
+          <li><a href="/add-and-show-message">Add and Show Message</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+        <h1 class="page-header">Home</h1>
+      </div>
+    </div>
+  </div>
+  <script src="/public/js/jquery-1.8.0.min.js"></script>
+  <script src="/public/js/bootstrap.min.js"></script>
+</body>
+
+</html>
